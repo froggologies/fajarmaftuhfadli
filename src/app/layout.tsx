@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-base text-text">
+    <html lang="en" className="bg-base text-text leading-snug">
       <body>{children}</body>
     </html>
   );

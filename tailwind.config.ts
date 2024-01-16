@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        blue: "#8aadf4",
         text: "#cad3f5",
+        subtext1: "#b8c0e0",
         base: "#24273a",
         mantle: "#1e2030",
         crust: "#181926",
