@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="bg-base text-white">
+    <main className="">
       <Header />
       <Banner />
       <Hero />
