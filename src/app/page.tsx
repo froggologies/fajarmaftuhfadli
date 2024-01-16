@@ -1,18 +1,39 @@
 export default function Home() {
   return (
     <main className="bg-base text-white">
-      <div className="bg-mantle flex flex-col px-4 py-2">
-        <span className="text-lg font-semibold">Frog</span>
-        <span className="text-blue text-sm">99 posts</span>
-      </div>
-      <div className="bg-crust h-32 w-full"></div>
+      <Header />
+      <Banner />
       <Hero />
       <NavBar />
     </main>
   );
 }
 
+function Header() {
+  return (
+    <div className="bg-mantle flex flex-col px-4 py-2">
+      <span className="text-lg font-semibold">Frog</span>
+      <span className="text-blue text-sm">99 posts</span>
+      {/** TODO: add 3 dots option here */}
+    </div>
+  );
+}
+
+function Banner() {
+  return <div className="bg-crust h-32 w-full">{/** TODO: add image */}</div>;
+}
+
 function Hero() {
+  const DisplayPicture = () => (
+    // The parent need to have display relative
+    <>
+      <div className="bg-base border-mantle absolute top-0 h-24 w-24 -translate-y-1/2 rounded-full border-2">
+        {/** TODO: add image */}
+      </div>
+      <div className="h-12 w-24"></div> {/** ghost component */}
+    </>
+  );
+
   return (
     <div className="bg-mantle relative p-4">
       <DisplayPicture />
@@ -41,16 +62,6 @@ function Hero() {
   );
 }
 
-function DisplayPicture() {
-  // The parent need to have display relative
-  return (
-    <>
-      <div className="bg-base border-mantle absolute top-0 h-24 w-24 -translate-y-1/2 rounded-full border-2"></div>
-      <div className="h-12 w-24"></div> {/** ghost component */}
-    </>
-  );
-}
-
 function NavBar() {
   const Li = ({ children }: { children: React.ReactNode }) => (
     <li className="hover:bg-base w-full cursor-pointer p-4 text-center">
@@ -61,6 +72,7 @@ function NavBar() {
   return (
     <nav className="bg-mantle border-overlay0 border-b-[1px]">
       <ul className="text-overlay0 flex w-full text-lg font-semibold">
+        {/** TODO: add icon for each item bellow */}
         <Li>Posts</Li>
         <Li>Experience</Li>
         <Li>Projects</Li>
