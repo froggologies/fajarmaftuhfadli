@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="">
@@ -20,15 +22,30 @@ function Header() {
 }
 
 function Banner() {
-  return <div className="bg-crust h-32 w-full">{/** TODO: add image */}</div>;
+  return (
+    <div className="bg-crust relative h-32 w-full">
+      <Image
+        src="/cat-waves.png"
+        alt="banner"
+        className="object-cover object-center"
+        fill
+        priority
+      />
+    </div>
+  );
 }
 
 function Hero() {
   const DisplayPicture = () => (
     // The parent need to have display relative
     <>
-      <div className="bg-base border-mantle absolute top-0 h-24 w-24 -translate-y-1/2 rounded-full border-2">
-        {/** TODO: add image */}
+      <div className="bg-base border-mantle absolute top-0 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full border-2">
+        <Image
+          src="/profile.png"
+          alt="profile"
+          fill
+          className="object-cover object-center"
+        />
       </div>
       <div className="h-12 w-24"></div> {/** ghost component */}
     </>
