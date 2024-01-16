@@ -4,6 +4,9 @@ export default function Home() {
       <section>
         <Hero />
       </section>
+      <section>
+        <About />
+      </section>
     </main>
   );
 }
@@ -34,6 +37,30 @@ function Hero() {
           </a>
         </li>
       </ul>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2 className="text-3xl font-semibold">About</h2>
+      <p>
+        Labore reiciendis, perferendis tempore earum explicabo porro voluptas
+        eveniet accusantium?
+      </p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum
+        natus iure consectetur dolorum odio explicabo tenetur temporibus
+        exercitationem optio! Nostrum aut numquam sint reiciendis laborum saepe
+        maiores culpa pariatur?
+      </p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        laboriosam nostrum corrupti beatae.
+      </p>
     </div>
   );
 }
