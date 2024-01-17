@@ -14,6 +14,15 @@ export default function Home() {
           slug={post.slug}
         />
       ))}
+      {sortedPosts.map((post) => (
+        <Post
+          key={post.slug}
+          title={post.title}
+          description={post.description}
+          date={post.date}
+          slug={post.slug}
+        />
+      ))}
     </main>
   );
 }
