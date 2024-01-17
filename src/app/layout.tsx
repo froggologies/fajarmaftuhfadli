@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-base text-text leading-snug">
-      <body className="bg-mantle">
+    <html lang="en" className="bg-mantle leading-snug text-text">
+      <body className="">
         <div className="mx-auto max-w-2xl">
           <Header />
           <Banner />

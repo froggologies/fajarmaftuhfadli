@@ -1,18 +1,47 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
 export default function NavBar() {
-  const Li = ({ children }: { children: React.ReactNode }) => (
-    <li className="hover:bg-base w-full cursor-pointer p-4 text-center">
-      {children}
-    </li>
-  );
+  const pathname = usePathname();
+
+  const pathlist = [
+    {
+      path: "/",
+      name: "Posts",
+    },
+    {
+      path: "/experience",
+      name: "Experience",
+    },
+    {
+      path: "/projects",
+      name: "Projects",
+    },
+    {
+      path: "/certificates",
+      name: "Certificates",
+    },
+  ];
 
   return (
-    <nav className="bg-mantle border-overlay0/50 border-b-[1px]">
-      <ul className="text-overlay0 flex w-full text-lg font-semibold">
+    <nav className="px-4">
+      <ul className="flex w-full text-lg font-semibold text-overlay0">
         {/** TODO: add icon for each item bellow */}
-        <Li>Posts</Li>
-        <Li>Experience</Li>
-        <Li>Projects</Li>
-        <Li>Certificates</Li>
+        {pathlist.map((item) => (
+          <li
+            className={clsx(
+              "w-full cursor-pointer rounded-sm p-4 text-center transition-colors hover:bg-base",
+              {
+                "text-text": pathname === item.path,
+                "text-overlay0 hover:text-text": pathname !== item.path,
+              },
+            )}
+          >
+            {item.name}
+          </li>
+        ))}
       </ul>
     </nav>
   );
