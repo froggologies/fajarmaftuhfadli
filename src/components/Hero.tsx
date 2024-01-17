@@ -1,10 +1,13 @@
 import Image from "next/image";
+import IconMapPin from "./icons/map-pin";
+import IconCodeBracket from "./icons/code-bracket";
+import IconArrowPath from "./icons/arrow-path";
 
 export default function Hero() {
   const DisplayPicture = () => (
     // The parent need to have display relative
     <>
-      <div className="bg-base border-mantle absolute top-0 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full border-2">
+      <div className="absolute top-0 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full border-2 border-mantle bg-base">
         <Image
           src="/profile.png"
           alt="profile"
@@ -17,7 +20,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="bg-mantle relative p-4">
+    <div className="relative bg-mantle p-4">
       <DisplayPicture />
       <div className="flex flex-col gap-4">
         <div>
@@ -30,13 +33,20 @@ export default function Hero() {
         </p>
         <div>
           <ul className="text-overlay0">
-            <li>Depok, Indonesia</li>
-            <li>
+            <li className="flex items-center gap-2">
+              <IconMapPin className="h-4 w-4" />
+              Depok, Indonesia
+            </li>
+            <li className="flex items-center gap-2">
+              <IconCodeBracket className="h-4 w-4" />
               <a className="text-blue" href="">
                 Source Code
               </a>
             </li>
-            <li>Updated January 2023</li>
+            <li className="flex items-center gap-2">
+              <IconArrowPath className="h-4 w-4" />
+              Updated January 2023
+            </li>
           </ul>
         </div>
       </div>
