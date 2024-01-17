@@ -26,8 +26,8 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="px-4">
-      <ul className="flex w-full text-lg font-semibold text-overlay0">
+    <nav className="overflow-hidden px-4">
+      <ul className="hide-scroll flex w-full overflow-x-scroll text-lg font-semibold text-overlay0">
         {/** TODO: add icon for each item bellow */}
         {pathlist.map((item) => (
           <li

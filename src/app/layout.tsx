@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-mantle leading-snug text-text">
+    <html lang="en" className="scroll-smooth bg-mantle leading-snug text-text">
       <body className="">
         <div className="mx-auto max-w-2xl">
           <Header />

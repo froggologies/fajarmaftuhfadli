@@ -27,8 +27,8 @@ interface Post {
 
 function Post({ title, description, date, slug }: Post) {
   return (
-    <div className="flex gap-4 rounded-sm p-4 transition-colors hover:bg-base hover:shadow-md">
-      <div className="h-16 w-24 rounded-sm bg-crust"></div>
+    <div className="flex gap-4 rounded-sm p-2 transition-colors hover:bg-base hover:shadow-md">
+      <div className="h-16 w-24 flex-shrink-0 rounded-sm bg-crust"></div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p>{description}</p>
