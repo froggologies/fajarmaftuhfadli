@@ -19,11 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth bg-mantle leading-snug text-text">
-      <body className="">
-        <div className="mx-auto max-w-2xl">
+      <body className="mx-auto max-w-6xl md:flex md:px-10">
+        <div className="sticky top-0 h-full max-w-md">
           <Header />
           <Banner />
           <Hero />
+        </div>
+        <div className="">
           <NavBar />
           {children}
           <div className="text-center">

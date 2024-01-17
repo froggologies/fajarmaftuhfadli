@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-2 backdrop-blur-sm">
+    <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-2 backdrop-blur-sm md:hidden lg:hidden">
       <div className="flex flex-col">
         <span className="text-lg font-semibold">Frog</span>
         <span className="text-sm text-blue">99 posts</span>
