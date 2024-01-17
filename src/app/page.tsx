@@ -31,8 +31,8 @@ function Post({ title, description, date, slug }: Post) {
       <div className="h-16 w-24 flex-shrink-0 rounded-sm bg-crust"></div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p>{description}</p>
-        <span>{date}</span>
+        <p className="text-subtext1">{description}</p>
+        <span className="text-sm text-overlay0">{date}</span>
       </div>
     </div>
   );

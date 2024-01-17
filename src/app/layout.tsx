@@ -26,6 +26,9 @@ export default function RootLayout({
           <Hero />
           <NavBar />
           {children}
+          <div className="text-center">
+            <span>º</span>
+          </div>
         </div>
       </body>
     </html>
