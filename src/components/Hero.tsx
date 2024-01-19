@@ -20,7 +20,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="relative p-4">
+    <div className="relative p-4 sm:px-10 md:px-16">
       <DisplayPicture />
       <div className="flex flex-col gap-4">
         <div>
