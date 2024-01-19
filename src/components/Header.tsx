@@ -7,7 +7,7 @@ export default function Header() {
       </div>
       <div className="flex h-8 w-8 flex-col items-center justify-center gap-1 rounded-full hover:bg-base hover:shadow-md ">
         {Array.from({ length: 3 }, (v, i) => (
-          <div className="h-1 w-1 rounded-full bg-text"></div>
+          <div key={i} className="h-1 w-1 rounded-full bg-text"></div>
         ))}
       </div>
     </div>

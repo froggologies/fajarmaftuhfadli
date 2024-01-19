@@ -31,6 +31,7 @@ export default function NavBar() {
         {/** TODO: add icon for each item bellow */}
         {pathlist.map((item) => (
           <li
+            key={item.path}
             className={clsx(
               "w-full cursor-pointer rounded-sm p-4 text-center transition-colors hover:bg-base",
               {
