@@ -12,7 +12,7 @@ export default function Banner() {
           priority
         />
       </div> */}
-      <div className="sticky -top-20 z-10 h-36 w-full bg-crust sm:-top-36 sm:h-52 md:-top-48 md:h-64 lg:hidden lg:h-40 lg:overflow-hidden lg:rounded-sm">
+      <div className="sticky -top-20 z-10 h-36 w-full bg-crust transition-[height] sm:-top-36 sm:h-52 md:-top-48 md:h-64 lg:hidden lg:h-40 lg:overflow-hidden lg:rounded-sm">
         <Image
           src="/evening-sky.png"
           alt="banner"
