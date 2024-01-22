@@ -4,25 +4,27 @@ export default function Home() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   return (
-    <main className="flex flex-col gap-4 p-4 sm:px-10 md:px-16">
-      {sortedPosts.map((post) => (
-        <Post
-          key={post.slug}
-          title={post.title}
-          description={post.description}
-          date={post.date}
-          slug={post.slug}
-        />
-      ))}
-      {sortedPosts.map((post) => (
-        <Post
-          key={post.slug}
-          title={post.title}
-          description={post.description}
-          date={post.date}
-          slug={post.slug}
-        />
-      ))}
+    <main className="flex flex-col gap-4 p-4 sm:px-10 md:px-16 lg:px-0">
+      <div className="mx-auto w-full max-w-lg sm:max-w-xl md:max-w-2xl">
+        {sortedPosts.map((post) => (
+          <Post
+            key={post.slug}
+            title={post.title}
+            description={post.description}
+            date={post.date}
+            slug={post.slug}
+          />
+        ))}
+        {sortedPosts.map((post) => (
+          <Post
+            key={post.slug}
+            title={post.title}
+            description={post.description}
+            date={post.date}
+            slug={post.slug}
+          />
+        ))}
+      </div>
     </main>
   );
 }
@@ -36,7 +38,7 @@ interface Post {
 
 function Post({ title, description, date, slug }: Post) {
   return (
-    <div className="flex gap-4 rounded-sm p-2 transition-colors hover:bg-mantle/50 hover:shadow-md">
+    <div className="flex gap-4 rounded-sm p-2 transition-colors hover:bg-base hover:shadow-md">
       <div className="h-16 w-24 flex-shrink-0 rounded-sm bg-crust"></div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold">{title}</h3>

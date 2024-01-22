@@ -26,7 +26,7 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="overflow-hidden px-4">
+    <nav className="sticky top-16 overflow-hidden border-b-[1px] border-b-overlay0 bg-mantle px-4">
       <ul className="hide-scroll flex w-full overflow-x-scroll text-lg font-semibold text-overlay0">
         {/** TODO: add icon for each item bellow */}
         {pathlist.map((item) => (

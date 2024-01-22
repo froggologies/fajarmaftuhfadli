@@ -7,7 +7,7 @@ export default function Hero() {
   const DisplayPicture = () => (
     // The parent need to have display relative
     <>
-      <div className="absolute top-0 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full border-2 border-mantle bg-base">
+      <div className="absolute top-0 z-10 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full border-4 border-mantle bg-crust">
         <Image
           src="/profile.png"
           alt="profile"
@@ -20,18 +20,16 @@ export default function Hero() {
   );
 
   return (
-    <div className="relative p-4 sm:px-10 md:px-16">
-      <DisplayPicture />
-      <div className="flex flex-col gap-4">
-        <div>
-          <h1 className="text-xl font-bold">Fajar Maftuh Fadli</h1>
+    <div className="relative p-4 sm:px-10 md:px-16 lg:p-0 lg:pt-4">
+      <div className="mx-auto max-w-lg sm:max-w-xl md:max-w-2xl">
+        <DisplayPicture />
+        <h1 className="mb-2 text-xl font-bold">Fajar Maftuh Fadli</h1>
+        <div className="flex flex-col gap-4">
           <p className="text-overlay0">@fajarmaftuhfadli</p>
-        </div>
-        <p className="text-subtext1">
-          Welcome, traveler. This one is a frog, hailing from the misty swamps
-          of Black Marsh. 🐸 Croak! May the Hist guide your path!
-        </p>
-        <div>
+          <p className="text-subtext1">
+            Welcome, traveler. This one is a frog, hailing from the misty swamps
+            of Black Marsh. 🐸 Croak! May the Hist guide your path!
+          </p>
           <ul className="text-overlay0">
             <li className="flex items-center gap-2">
               <IconMapPin className="h-4 w-4" />
