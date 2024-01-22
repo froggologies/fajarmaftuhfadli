@@ -7,11 +7,6 @@ export default function Header() {
 
   return (
     <animated.div
-      // style={{
-      //   backgroundColor: scrollY.to((y) =>
-      //     y < 80 ? `rgba(30, 32, 48, ${y / 80})` : "#1e2030d8",
-      //   ),
-      // }}
       style={{
         backgroundColor: scrollY.to(
           (y) => `rgba(30, 32, 48, ${Math.min(y / 80, 0.8)})`,
