@@ -15,7 +15,7 @@ export default function Home() {
             description={post.description}
             date={post.date}
             slug={post.slug}
-            image={`https://source.unsplash.com/random/200x200/` + `?${i}`}
+            image={`https://source.unsplash.com/random/300x200/` + `?${i}`}
           />
         ))}
         {sortedPosts.map((post, i) => (
@@ -25,7 +25,7 @@ export default function Home() {
             description={post.description}
             date={post.date}
             slug={post.slug}
-            image={`https://source.unsplash.com/random/200x200/` + `?${i}`}
+            image={`https://source.unsplash.com/random/300x200/` + `?${i}`}
           />
         ))}
       </div>
