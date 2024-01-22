@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const posts = getPosts();
   const sortedPosts = posts.sort(
@@ -5,23 +7,25 @@ export default function Home() {
   );
   return (
     <main className="p-4 sm:px-10 md:px-16 lg:px-0">
-      <div className="mx-auto flex w-full max-w-lg flex-col gap-4 sm:max-w-xl md:max-w-2xl">
-        {sortedPosts.map((post) => (
+      <div className="mx-auto flex w-full max-w-lg flex-col gap-10 sm:max-w-xl md:max-w-2xl">
+        {sortedPosts.map((post, i) => (
           <Post
             key={post.slug}
             title={post.title}
             description={post.description}
             date={post.date}
             slug={post.slug}
+            image={`https://source.unsplash.com/random/200x200/` + `?${i}`}
           />
         ))}
-        {sortedPosts.map((post) => (
+        {sortedPosts.map((post, i) => (
           <Post
             key={post.slug}
             title={post.title}
             description={post.description}
             date={post.date}
             slug={post.slug}
+            image={`https://source.unsplash.com/random/200x200/` + `?${i}`}
           />
         ))}
       </div>
@@ -34,12 +38,21 @@ interface Post {
   description: string;
   date: string;
   slug: string;
+  image: string;
 }
 
-function Post({ title, description, date, slug }: Post) {
+function Post({ title, description, date, slug, image }: Post) {
   return (
-    <div className="flex gap-4 rounded-sm p-2 transition-colors hover:bg-base hover:shadow-md">
-      <div className="h-16 w-24 flex-shrink-0 rounded-sm bg-crust"></div>
+    <div className="flex gap-4 rounded-sm">
+      <div className="relative h-16 w-24 flex-shrink-0 overflow-hidden rounded-sm bg-crust">
+        <Image
+          src={image}
+          width={200}
+          height={200}
+          alt="post image"
+          className="object-cover object-center"
+        />
+      </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-subtext1">{description}</p>
