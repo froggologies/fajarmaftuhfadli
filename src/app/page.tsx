@@ -4,8 +4,8 @@ export default function Home() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   return (
-    <main className="flex flex-col gap-4 p-4 sm:px-10 md:px-16 lg:px-0">
-      <div className="mx-auto w-full max-w-lg sm:max-w-xl md:max-w-2xl">
+    <main className="p-4 sm:px-10 md:px-16 lg:px-0">
+      <div className="mx-auto flex w-full max-w-lg flex-col gap-4 sm:max-w-xl md:max-w-2xl">
         {sortedPosts.map((post) => (
           <Post
             key={post.slug}

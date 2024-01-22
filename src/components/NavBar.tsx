@@ -23,11 +23,15 @@ export default function NavBar() {
       path: "/certificates",
       name: "Certificates",
     },
+    {
+      path: "/links",
+      name: "Links",
+    },
   ];
 
   return (
     <nav className="sticky top-12 overflow-hidden border-b-[1px] border-b-overlay0 bg-mantle px-4 pt-4">
-      <ul className="hide-scroll flex w-full overflow-x-scroll text-lg font-semibold text-overlay0">
+      <ul className="hide-scroll flex w-full overflow-x-scroll font-semibold text-overlay0">
         {/** TODO: add icon for each item bellow */}
         {pathlist.map((item) => (
           <li
