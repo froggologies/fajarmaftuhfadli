@@ -23,8 +23,8 @@ export default function Hero() {
     <div className="relative p-4 sm:px-10 md:px-16 lg:p-0 lg:pt-4">
       <div className="mx-auto max-w-lg sm:max-w-xl md:max-w-2xl">
         <DisplayPicture />
-        <h1 className="mb-2 text-xl font-bold">Fajar Maftuh Fadli</h1>
-        <div className="flex flex-col gap-4">
+        <h1 className="text-xl font-bold">Fajar Maftuh Fadli</h1>
+        <div className="flex flex-col gap-2">
           <p className="text-overlay0">@fajarmaftuhfadli</p>
           <p className="text-subtext1">
             Welcome, traveler. This one is a frog, hailing from the misty swamps
