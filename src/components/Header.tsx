@@ -1,6 +1,19 @@
+"use client";
+
+import { useScroll, animated } from "@react-spring/web";
+
 export default function Header() {
+  const { scrollY } = useScroll();
+
   return (
-    <div className="#bg-mantle/80 fixed top-0 z-20 w-full px-4 py-2 backdrop-blur-sm lg:hidden">
+    <animated.div
+      style={{
+        backgroundColor: scrollY.to((y) =>
+          y > 80 ? "#1e2030cc" : "#1e203000",
+        ),
+      }}
+      className="fixed top-0 z-20 w-full px-4 py-2 backdrop-blur-sm duration-150 lg:hidden"
+    >
       <div className="mx-auto flex w-full max-w-lg items-center justify-between sm:max-w-xl md:max-w-2xl">
         <div className="flex flex-col">
           <span className="text-lg font-semibold">Frog</span>
@@ -12,6 +25,6 @@ export default function Header() {
           ))}
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
