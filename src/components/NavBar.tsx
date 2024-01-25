@@ -23,7 +23,7 @@ export default function NavBar() {
           )
         )
           check = true;
-      })(navigator.userAgent || navigator.vendor || window.opera);
+      })(navigator.userAgent || navigator.vendor);
 
       setIsMobile(check);
     };
