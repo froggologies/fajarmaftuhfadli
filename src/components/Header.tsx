@@ -11,8 +11,9 @@ export default function Header() {
         backgroundColor: scrollY.to(
           (y) => `rgba(30, 32, 48, ${Math.min(y / 80, 0.8)})`,
         ),
+        backdropFilter: scrollY.to((y) => `blur(${Math.min(y / 80, 4)}px)`),
       }}
-      className="fixed top-0 z-20 h-16 w-full px-4 py-2 backdrop-blur-sm duration-150 lg:hidden"
+      className="fixed top-0 z-20 h-16 w-full px-4 py-2 duration-150 lg:hidden"
     >
       <div className="mx-auto flex w-full max-w-lg items-center justify-between sm:max-w-xl md:max-w-2xl">
         <div className="flex flex-col">
